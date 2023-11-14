@@ -1,57 +1,54 @@
 var quiz = {
-    // (A) PROPERTIES
-    // (A1) QUESTIONS & ANSWERS
-    // Q = QUESTION, O = OPTIONS, A = CORRECT ANSWER
     data: [
     {
-      q : "What is the standard distance between the target and archer in Olympics?",
+      q : "Which of the following is not an OOPS concept?",
       o : [
-        "50 meters",
-        "70 meters",
-        "100 meters",
-        "120 meters"
-      ],
-      a : 1 // arrays start with 0, so answer is 70 meters
-    },
-    {
-      q : "Which is the highest number on a standard roulette wheel?",
-      o : [
-        "22",
-        "24",
-        "32",
-        "36"
-      ],
-      a : 3
-    },
-    {
-      q : "How much wood could a woodchuck chuck if a woodchuck would chuck wood?",
-      o : [
-        "150 KG",
-        "200 KG",
-        "350 KG",
-        "420 KG"
+        "Encapsulation",
+        "Polymorphism",
+        "Exception",
+        "Abstraction",
       ],
       a : 2
     },
     {
-      q : "Which is the seventh planet from the sun?",
+      q : "Which feature of OOPS derives the class from another class?",
       o : [
-        "Uranus",
-        "Earth",
-        "Pluto",
-        "Mars"
+        "Inheritance",
+        "Data hiding",
+        "Encapsulation",
+        "Polymorphism",
       ],
       a : 0
     },
     {
-      q : "Which is the largest ocean on Earth?",
+      q : "Which class cannot create its instance?",
       o : [
-        "Atlantic Ocean",
-        "Indian Ocean",
-        "Arctic Ocean",
-        "Pacific Ocean"
+        "Parent Class",
+        "Nested Class",
+        "Anonymous Class",
+        "Abstract Class"
       ],
       a : 3
+    },
+    {
+      q : "On what basis is it determined, when a variable comes into existence in memory?",
+      o : [
+        "Data type",
+        "Storage Class",
+        "Scope",
+        "All of the above"
+      ],
+      a : 1
+    },
+    {
+      q : "What is the number of parameters that a default constructor requires?",
+      o : [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      a : 0
     }
     ],
   
