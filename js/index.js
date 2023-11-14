@@ -59,7 +59,8 @@ var quiz = {
   
     // (A3) GAME FLAGS
     now: 0, // current question
-    score: 0, // current score
+    score: 0,
+    username:"", // current score
   
     // (B) INIT QUIZ HTML
     init: () => {
