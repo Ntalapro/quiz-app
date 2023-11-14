@@ -153,3 +153,8 @@
     background: #ffe8e8;
     border: 1px solid #c78181;
   }
+#details{
+    display:flex;
+    flex: row;
+    justify-content:center
+  }
