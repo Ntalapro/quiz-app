@@ -1,3 +1,6 @@
+let username = localStorage.getItem("username");
+
+
 var quiz = {
     data: [
     {
@@ -59,12 +62,40 @@ var quiz = {
   
     // (A3) GAME FLAGS
     now: 0, // current question
-    score: 0,
-    username:"", // current score
+    score: 0, // current score
+    username: username, // name from landing.html
+    users: [],
+
+    getUsers:()=>{
+      fetch("http://localhost:3000/users")
+            .then(response => response.json())
+            .then(data => {
+                quiz.users = data;
+                console.log(quiz.users);
+            })
+            .catch(error => {
+                console.error("Error loading uers:", error);
+            });
+    },
+
+    addUser:() =>{
+      let score =(quiz.score/quiz.data.length)*100;
+          fetch("http://localhost:3000/users", {
+              method: "POST",
+              headers: {
+                  "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ name: quiz.username, score:score}),
+          })
+            .catch(error => {
+                  console.error("Error adding task:", error);
+              });
+  },
   
     // (B) INIT QUIZ HTML
     init: () => {
       // (B1) WRAPPER
+      quiz.getUsers();
       quiz.hWrap = document.getElementById("quizWrap");
   
       // (B2) QUESTIONS SECTION
@@ -79,6 +110,7 @@ var quiz = {
   
       // (B4) GO!
       quiz.draw();
+
     },
   
     // (C) DRAW QUESTION
@@ -125,10 +157,12 @@ var quiz = {
       setTimeout(() => {
         if (quiz.now < quiz.data.length) { quiz.draw(); }
         else {
+          quiz.addUser();
           quiz.hQn.innerHTML = `You have answered ${quiz.score} of ${quiz.data.length} correctly.`;
           quiz.hAns.innerHTML = "";
+          window.location.href = "./scoreboard.html";
         }
-      }, 1000);
+      }, 1000)
     },
   
     // (E) RESTART QUIZ
