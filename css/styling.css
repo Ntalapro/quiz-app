@@ -54,6 +54,13 @@
   /* WIDGET */
   .widget-wrap {
     width: 600px;
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.4);
+  }
+
+  .widget-wrap1 {
+    width: 600px;
     height: 700px;
     padding: 30px;
     border-radius: 20px;
@@ -61,9 +68,6 @@
     color: white;
     
   }
-  
-
-
   
   body {
     display: flex;
@@ -138,3 +142,81 @@
     color: purple;
     
   }
+
+
+#left {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+#details {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: black;
+ 
+}
+
+#username {
+  margin-right:11rem;
+  font-size: x-large;
+  font-family:Arial, Helvetica, sans-serif;
+  color:black;
+  font-weight: bolder;
+}
+
+#usernameInput {
+  width: 300px;
+  height: 40px;
+  border-radius: 8px;
+  background:#f7f6f2;
+  
+}
+
+#submit {
+  width: 100px;
+  height: 40px;
+  margin-top: 30px;
+  font-weight: bold;
+  color: black;
+  border-radius: 10px;
+}
+
+
+@keyframes moveText {
+  0% {
+      transform: translateX(0);
+  }
+  50% {
+      transform: translateX(100px);
+  }
+  100% {
+      transform: translateX(0);
+  }
+}
+.moving-text {
+  animation: moveText 2s linear infinite;
+  margin-right: 4rem;
+  
+  
+}
+.big-text {
+  font-size: xx-large;
+}
+
+.anotherclass {
+  display: flex;
+  flex: row;
+  width: 100vh;
+  height: 400px;
+
+}
