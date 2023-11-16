@@ -64,19 +64,6 @@ var quiz = {
     now: 0, // current question
     score: 0, // current score
     username: username, // name from landing.html
-    users: [],
-
-    getUsers:()=>{
-      fetch("http://localhost:3000/users")
-            .then(response => response.json())
-            .then(data => {
-                quiz.users = data;
-                console.log(quiz.users);
-            })
-            .catch(error => {
-                console.error("Error loading uers:", error);
-            });
-    },
 
     addUser:() =>{
       let score =(quiz.score/quiz.data.length)*100;
@@ -87,6 +74,7 @@ var quiz = {
               },
               body: JSON.stringify({ name: quiz.username, score:score}),
           })
+          .then(localStorage.setItem("score", score))
             .catch(error => {
                   console.error("Error adding task:", error);
               });
@@ -95,7 +83,6 @@ var quiz = {
     // (B) INIT QUIZ HTML
     init: () => {
       // (B1) WRAPPER
-      quiz.getUsers();
       quiz.hWrap = document.getElementById("quizWrap");
   
       // (B2) QUESTIONS SECTION
