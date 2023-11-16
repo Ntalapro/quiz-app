@@ -1,3 +1,4 @@
+//structuring data (json)
 var quiz = {
     data: [
     {
@@ -63,6 +64,8 @@ var quiz = {
   
     // (B) INIT QUIZ HTML
     init: () => {
+      //This suggests that there is an HTML element with the ID "quizWrap" in the document, and this code is trying to get a reference to it.
+      
       // (B1) WRAPPER
       quiz.hWrap = document.getElementById("quizWrap");
   
