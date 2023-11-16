@@ -1,7 +1,7 @@
 let users= []; 
 let rank= 0;
 function fetchAllUsers() {
-    fetch("http://localhost:3000/users")
+    fetch("http://localhost:2000/users")
               .then(response => response.json())
               .then(data => {
                   users = data;

@@ -67,7 +67,7 @@ var quiz = {
 
     addUser:() =>{
       let score =(quiz.score/quiz.data.length)*100;
-          fetch("http://localhost:3000/users", {
+          fetch("http://localhost:2000/users", {
               method: "POST",
               headers: {
                   "Content-Type": "application/json",
