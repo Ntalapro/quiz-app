@@ -4,7 +4,7 @@ let username = localStorage.getItem("username");
 var quiz = {
     data: [
     {
-      q : "Which of the following is not an OOPS concept?",
+      q : "Which of the following is not an OOP concept?",
       o : [
         "Encapsulation",
         "Polymorphism",
@@ -14,7 +14,7 @@ var quiz = {
       a : 2
     },
     {
-      q : "Which feature of OOPS derives the class from another class?",
+      q : "Which feature of OOP derives the class from another class?",
       o : [
         "Inheritance",
         "Data hiding",
