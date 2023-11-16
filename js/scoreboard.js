@@ -19,6 +19,6 @@ window.addEventListener("load", ()=>{
     <p>Your scored ${score}% on the quiz</p>`
 });
 
-document.getElementById("next").addEventListener("click", function() {
+document.getElementById("usernameButton").addEventListener("click", function() {
     window.location.href = "./leaderboard.html";
 });
