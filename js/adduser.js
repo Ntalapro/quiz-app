@@ -1,5 +1,10 @@
 document.getElementById("usernameButton").addEventListener("click", function() {
     let username = document.getElementById("usernameInput").value;
-    localStorage.setItem("username", username);
-    window.location.href = "./index.html";
+    if(username.length > 0) {
+        localStorage.setItem("username", username);
+        window.location.href = "./index.html";
+    }else{
+        alert("Please enter a valid username!");
+    }
+
 });
