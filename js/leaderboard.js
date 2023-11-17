@@ -21,7 +21,7 @@ function execute(array){
     let class_name="";
     for(var i=0;i<array.length;i++) {
         
-        if (array[i].score == 100){
+        if (array[i].score >= 80){
             image_src = "./assets/gold_medal-removebg-preview.png";
         }
         else if (array[i].score >=60){
@@ -71,6 +71,4 @@ document.getElementById("exitButton").addEventListener("click", function() {
     window.location.href = "./landing.html";
 });
 
-window.addEventListener("load",()=>{
-    fetchAllUsers();
-});
+window.addEventListener("load",fetchAllUsers);

@@ -4,7 +4,7 @@ let score = localStorage.getItem("score");
 
 
 window.addEventListener("load", ()=>{
-    if (score == 100){
+    if (score >= 80){
         document.getElementById("picture").src = "./assets/gold_medal-removebg-preview.png" 
     }
     else if (score >=60){

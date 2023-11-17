@@ -78,7 +78,7 @@ var quiz = {
             .catch(error => {
                   console.error("Error adding task:", error);
               });
-  },
+    },
   
     // (B) INIT QUIZ HTML
     init: () => {
@@ -116,7 +116,7 @@ var quiz = {
         let label = document.createElement("label");
         label.innerHTML = quiz.data[quiz.now].o[i];
         label.setAttribute("for", "quizo" + i);
-        label.dataset.idx = i;
+        label.dataset.idx = i; // adding a custom attribute for label "idx"
         label.addEventListener("click", () => { quiz.select(label); });
         quiz.hAns.appendChild(label);
       }
@@ -150,13 +150,6 @@ var quiz = {
           window.location.href = "./scoreboard.html";
         }
       }, 1000)
-    },
-  
-    // (E) RESTART QUIZ
-    reset : () => {
-      quiz.now = 0;
-      quiz.score = 0;
-      quiz.draw();
     }
   };
   window.addEventListener("load", quiz.init);

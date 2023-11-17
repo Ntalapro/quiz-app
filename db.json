@@ -1,24 +1,14 @@
 {
   "users": [
     {
-      "name": "Zman",
+      "name": "Thendo",
       "score": 60,
       "id": 9
     },
     {
-      "name": "Zman2",
-      "score": 0,
-      "id": 10
-    },
-    {
-      "name": "Intel2345",
+      "name": "Intel",
       "score": 80,
       "id": 11
-    },
-    {
-      "name": "Intel6000",
-      "score": 20,
-      "id": 12
     },
     {
       "name": "Lory",
@@ -26,19 +16,14 @@
       "id": 13
     },
     {
-      "name": "Intel",
-      "score": 40,
+      "name": "Tman",
+      "score": 80,
       "id": 14
     },
     {
-      "name": "Maths Guy",
-      "score": 80,
-      "id": 15
-    },
-    {
-      "name": "Moloro",
+      "name": "oop g",
       "score": 100,
-      "id": 16
+      "id": 15
     }
   ]
 }
