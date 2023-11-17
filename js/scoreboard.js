@@ -16,7 +16,7 @@ window.addEventListener("load", ()=>{
 
     document.getElementById("code-boxx").innerHTML = `
     <h3>${username}</h3>
-    <p>Your scored ${score}% on the quiz</p>`
+    <p>You scored ${score}% on the quiz</p>`
 });
 
 document.getElementById("usernameButton").addEventListener("click", function() {

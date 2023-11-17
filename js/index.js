@@ -1,7 +1,10 @@
-let username = localStorage.getItem("username");
+// Tshepiso Ncosane ----------------------------------------------------------------
+
+let username = localStorage.getItem("username"); // get the username from localStorage
 
 
 var quiz = {
+  // A(1) game questions and answers
     data: [
     {
       q : "Which of the following is not an OOP concept?",
@@ -65,7 +68,7 @@ var quiz = {
     score: 0, // current score
     username: username, // name from landing.html
 
-    addUser:() =>{
+    addUser:() =>{ // add user to the json database
       let score =(quiz.score/quiz.data.length)*100;
           fetch("http://localhost:2000/users", {
               method: "POST",
@@ -125,10 +128,10 @@ var quiz = {
     // (D) OPTION SELECTED
     select: (option) => {
       // (D1) DETACH ALL ONCLICK
-      let all = quiz.hAns.getElementsByTagName("label");
-      for (let label of all) {
-        label.removeEventListener("click", quiz.select);
-      }
+      // let all = quiz.hAns.getElementsByTagName("label");
+      // for (let label of all) {
+      //   label.removeEventListener("click", quiz.select);
+      // }
   
       // (D2) CHECK IF CORRECT
       let correct = option.dataset.idx == quiz.data[quiz.now].a;
@@ -154,3 +157,4 @@ var quiz = {
   };
   window.addEventListener("load", quiz.init);
   
+// ----------------------------------------------------------------
