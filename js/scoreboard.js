@@ -1,3 +1,5 @@
+//Thendo ----------------------------------------------------------------
+
 let username = localStorage.getItem("username");
 let score = localStorage.getItem("score");
 
@@ -22,3 +24,6 @@ window.addEventListener("load", ()=>{
 document.getElementById("usernameButton").addEventListener("click", function() {
     window.location.href = "./leaderboard.html";
 });
+
+
+// ----------------------------------------------------------------
