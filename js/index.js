@@ -79,7 +79,7 @@ var quiz = {
           })
           .then(localStorage.setItem("score", score))
             .catch(error => {
-                  console.error("Error adding task:", error);
+                  console.error("Error adding User:", error);
               });
     },
   

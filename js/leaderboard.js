@@ -1,5 +1,7 @@
 let users= []; 
 let rank= 0;
+
+//Moloro
 function fetchAllUsers() {
     fetch("http://localhost:2000/users")
               .then(response => response.json())
@@ -15,6 +17,10 @@ function fetchAllUsers() {
 function sorted(array){
         array.sort((a, b) => b.score - a.score);
 }
+//----------------------------------------------------------------
+
+
+// Thabo 
 function execute(array){
     console.log(array);
     let image_src = "";
@@ -66,9 +72,12 @@ function execute(array){
 
     document.getElementById("share").innerHTML = `<p>Your User Number: ${rank}</p>`
 }
+//---------------------------------------------------------------------------
 
+//Moloro
 document.getElementById("exitButton").addEventListener("click", function() {
     window.location.href = "./landing.html";
 });
 
 window.addEventListener("load",fetchAllUsers);
+//----------------------------------------------------------------------------
