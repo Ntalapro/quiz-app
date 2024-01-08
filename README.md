@@ -2,7 +2,7 @@
 An application I just built using to practice my Vanilla JS, HTML, and CSS.
 Clone the Repo and Then Follow the requirements steps.
 
-Quiz is based on Java
+Quiz is based on core Java
 
 ## Requirements
 ```bash
