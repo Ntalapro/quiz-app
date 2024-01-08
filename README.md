@@ -1,13 +1,15 @@
 # A Simple Quiz-App
-An application i just built using to practice my Vanilla JS, HTML and CSS.
+An application I just built using to practice my Vanilla JS, HTML, and CSS.
 Clone the Repo and Then Follow the requirements steps.
+
+Quiz is based on Java
 
 ## Requirements
 ```bash
 # Install JSON Server Globally
 npm install -g json-server
 
-# Check JSON Server version
+# Check the JSON Server version
 json-server --version
 
 # Run JSON server
@@ -20,5 +22,7 @@ json-server --watch db.json
  json-server --watch db.json
  # Then change the port in fetch api js to 3000
 ```
+
+## After running the Server First, just run your application.
 
 
