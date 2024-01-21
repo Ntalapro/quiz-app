@@ -2,6 +2,8 @@
 An application I just built using to practice my Vanilla JS, HTML, and CSS.
 Clone the Repo and Then Follow the requirements steps.
 
+I am working on transferring the db to firebase and include a login feature
+
 Quiz is based on core Java
 
 ## Requirements
