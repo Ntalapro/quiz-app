@@ -3,12 +3,13 @@ let rank= 0;
 
 //Moloro
 function fetchAllUsers() {
-    fetch("http://localhost:2000/users")
+    fetch("https://quizapp-api-ijnr.onrender.com/users")
               .then(response => response.json())
               .then(data => {
                   users = data;
                   sorted(users);
                   execute(users);
+                  console.log(users);
               })
               .catch(error => {
                   console.error("Error loading users:", error);

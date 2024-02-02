@@ -1,6 +1,7 @@
 // Tshepiso Ncosane ----------------------------------------------------------------
 
 let username = localStorage.getItem("username"); // get the username from localStorage
+console.log(username);
 
 
 var quiz = {
@@ -68,9 +69,9 @@ var quiz = {
     score: 0, // current score
     username: username, // name from landing.html
 
-    addUser:() =>{ // add user to the json database
-      let score =(quiz.score/quiz.data.length)*100;
-          fetch("http://localhost:2000/users", {
+    addUser:async () =>{ // add user to the json database
+          let score =(quiz.score/quiz.data.length)*100;
+          fetch("https://quizapp-api-ijnr.onrender.com/users", {
               method: "POST",
               headers: {
                   "Content-Type": "application/json",
@@ -128,10 +129,10 @@ var quiz = {
     // (D) OPTION SELECTED
     select: (option) => {
       // (D1) DETACH ALL ONCLICK
-      // let all = quiz.hAns.getElementsByTagName("label");
-      // for (let label of all) {
-      //   label.removeEventListener("click", quiz.select);
-      // }
+      let all = quiz.hAns.getElementsByTagName("label");
+      for (let label of all) {
+        label.removeEventListener("click", quiz.select);
+      }
   
       // (D2) CHECK IF CORRECT
       let correct = option.dataset.idx == quiz.data[quiz.now].a;
@@ -144,13 +145,16 @@ var quiz = {
   
       // (D3) NEXT QUESTION OR END GAME
       quiz.now++;
-      setTimeout(() => {
+      setTimeout(async () => {
         if (quiz.now < quiz.data.length) { quiz.draw(); }
         else {
-          quiz.addUser();
+          await quiz.addUser();
           quiz.hQn.innerHTML = `You have answered ${quiz.score} of ${quiz.data.length} correctly.`;
           quiz.hAns.innerHTML = "";
-          window.location.href = "./scoreboard.html";
+          setTimeout(() => {
+            window.location.href = "./scoreboard.html";
+          }, 1000);
+          //window.location.href = "./scoreboard.html";
         }
       }, 1000)
     }
