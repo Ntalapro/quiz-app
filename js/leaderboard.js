@@ -77,7 +77,7 @@ function execute(array){
 
 //Moloro
 document.getElementById("exitButton").addEventListener("click", function() {
-    window.location.href = "./landing.html";
+    window.location.href = "./index.html";
 });
 
 window.addEventListener("load",fetchAllUsers);

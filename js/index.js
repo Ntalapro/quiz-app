@@ -1,7 +1,6 @@
 // Tshepiso Ncosane ----------------------------------------------------------------
 
 let username = localStorage.getItem("username"); // get the username from localStorage
-console.log(username);
 
 
 var quiz = {
