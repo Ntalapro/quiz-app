@@ -71,7 +71,8 @@
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.4);
     color: white;
-    
+    font-size: large;
+
   }
   
   body {
@@ -90,7 +91,7 @@
   
   /* FOOTER */
   #code-boxx {
-    font-weight: 600;
+    font-weight: large;
     margin-top: 30px;
   }
   #code-boxx a {
@@ -207,7 +208,6 @@
 .moving-text {
   animation: moveText 5s linear infinite;
   margin-right: 8rem;
-  padding: 1em;
 }
 
 .big-text {
@@ -231,6 +231,14 @@
     border-left: 0px solid ;
     border-top: 1px solid black;
   }
+  .widget-wrap2 {
+    width: 350px;
+    height: 400px;
+    padding: 10px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.4);
+  }
+  
 }
 
 
